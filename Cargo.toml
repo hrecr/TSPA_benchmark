@@ -1,0 +1,18 @@
+[package]
+name = "tspa"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+blake3 = "1"
+rand_core = "0.6"
+rand_chacha = "0.3"
+curve25519-dalek = "4"
+aes = "0.8"
+ctr = "0.9"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
